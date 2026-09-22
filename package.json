@@ -1,0 +1,29 @@
+{
+  "name": "sfm-backend-server",
+  "version": "1.0.0",
+  "description": "Spartans Facility Management (SFM) - Node & Express REST API Server",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node index.js",
+    "seed": "node scripts/seed.js",
+    "create-admin": "node scripts/create-admin.js",
+    "create:admin": "node scripts/create-admin.js"
+  },
+  "keywords": [
+    "express",
+    "mongoose",
+    "rest-api",
+    "sfm"
+  ],
+  "author": "DigiCoders Technologies",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.2",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^9.10.1"
+  }
+}
