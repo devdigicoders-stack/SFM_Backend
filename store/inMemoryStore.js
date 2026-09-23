@@ -68,38 +68,8 @@ const store = {
       notes: 'Server room Precision AC audit and DB thermography completed with zero downtime.'
     }
   ],
-  categories: [
-    { id: 'cat-1', name: 'AI & Predictive FM', slug: 'ai-predictive', count: 2, color: 'bg-sky-100 text-sky-800' },
-    { id: 'cat-2', name: 'Hard Engineering', slug: 'hard-engineering', count: 2, color: 'bg-amber-100 text-amber-800' },
-    { id: 'cat-3', name: 'Safety & Compliance', slug: 'safety-compliance', count: 1, color: 'bg-emerald-100 text-emerald-800' },
-    { id: 'cat-4', name: 'Case Studies', slug: 'case-studies', count: 1, color: 'bg-purple-100 text-purple-800' }
-  ],
-  blogs: [
-    {
-      id: 'blog-1',
-      title: 'How AI Predictive Telemetry Prevents HVAC Chiller Failures in Luxury Hotels',
-      category: 'AI & Predictive FM',
-      categoryId: 'cat-1',
-      author: 'Pranjal Gupta',
-      date: '2026-06-18',
-      readTime: '4 min read',
-      published: true,
-      excerpt: 'Traditional maintenance is reactive. Learn how Vigyani.ai IoT vibration and thermal sensors predict motor bearing degradation 72 hours before catastrophic breakdown.',
-      content: '<h2>The Shift from Reactive to Predictive Asset Oversight</h2><p>Commercial chiller plants in five-star hotels operate under continuous thermal strain. When a bearing fails unexpectedly during a banquet event, the financial and reputational cost is enormous.</p><p>By deploying <strong>Vigyani.ai IoT sensor arrays</strong>, engineering heads receive real-time alerts 72 hours in advance of mechanical failure.</p>'
-    },
-    {
-      id: 'blog-2',
-      title: 'Zero Liability Transfer: Why 100% ESIC, PF & LOTO Protocols Protect Property Owners',
-      category: 'Safety & Compliance',
-      categoryId: 'cat-3',
-      author: 'SFM Safety Cell',
-      date: '2026-06-12',
-      readTime: '5 min read',
-      published: true,
-      excerpt: 'Uncertified third-party contractors expose corporate facilities to severe legal liabilities. Discover how Spartans FM enforces strict Lock-Out, Tag-Out and statutory insurance backing.',
-      content: '<h2>Corporate Protection through Strict Statutory Compliance</h2><p>Facility owners often face severe liabilities if uncertified third-party contractors suffer accidents on site. Spartans FM guarantees 100% ESIC and Workmen Compensation backing.</p>'
-    }
-  ],
+  categories: [],
+  blogs: [],
   banners: [
     {
       id: 'ban-1',

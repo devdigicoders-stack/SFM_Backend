@@ -17,12 +17,14 @@ const connectDB = async () => {
   }
 };
 
-const getDBStatus = () => ({
-  connected: isMongoConnected,
-  type: isMongoConnected ? 'MongoDB Live Cluster' : 'Persistent File-Backed Collections Store'
-});
+const isConnected = () => {
+  return mongoose.connection && mongoose.connection.readyState === 1;
+};
 
-const isConnected = () => isMongoConnected;
+const getDBStatus = () => ({
+  connected: isConnected(),
+  type: isConnected() ? 'MongoDB Live Cluster' : 'Persistent File-Backed Collections Store'
+});
 
 module.exports = { connectDB, getDBStatus, isConnected };
 

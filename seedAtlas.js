@@ -80,6 +80,7 @@ async function seedDatabase() {
       {
         title: 'How AI Predictive Telemetry Prevents HVAC Chiller Failures in Luxury Hotels',
         slug: 'ai-predictive-hvac-chiller-failures',
+        image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80',
         category: 'AI & Predictive FM',
         categoryId: categories[0]._id.toString(),
         author: 'Pranjal Gupta',
@@ -99,6 +100,7 @@ async function seedDatabase() {
       {
         title: 'Zero Liability Transfer: Why 100% ESIC, PF & LOTO Protocols Protect Property Owners',
         slug: 'zero-liability-transfer-esic-pf-loto',
+        image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80',
         category: 'Safety & Compliance',
         categoryId: categories[2]._id.toString(),
         author: 'SFM Safety Cell',
@@ -113,6 +115,7 @@ async function seedDatabase() {
       {
         title: 'Optimizing Central Command Dispatch in Multi-Tenant Commercial IT Parks',
         slug: 'central-command-dispatch-multi-tenant-it-parks',
+        image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80',
         category: 'Hard Engineering',
         categoryId: categories[1]._id.toString(),
         author: 'Technical Operations Team',
@@ -126,6 +129,7 @@ async function seedDatabase() {
       {
         title: 'Case Study: 32% Energy Saving at a 500-Bed Super Specialty Hospital',
         slug: 'case-study-energy-saving-hospital',
+        image: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80',
         category: 'Case Studies',
         categoryId: categories[3]._id.toString(),
         author: 'Energy Audit Cell',
