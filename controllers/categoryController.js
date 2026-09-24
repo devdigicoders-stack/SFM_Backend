@@ -1,4 +1,5 @@
 const Category = require('../models/Category');
+const Blog = require('../models/Blog');
 
 // @desc    Get all categories directly from MongoDB Database
 // @route   GET /api/categories
@@ -71,6 +72,15 @@ exports.updateCategory = async (req, res) => {
     }
 
     if (!cat) return res.status(404).json({ success: false, message: 'Category not found' });
+
+    // Also update all blogs referencing this category so blog listings stay updated
+    if (name) {
+      await Blog.updateMany(
+        { $or: [{ categoryId: cat._id.toString() }, { category: cat.name }] },
+        { $set: { category: name, categoryId: cat._id.toString() } }
+      );
+    }
+
     return res.json({
       success: true,
       data: {
