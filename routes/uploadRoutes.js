@@ -4,21 +4,31 @@ const multer = require('multer');
 const path = require('path');
 const fs = require('fs');
 
-// Ensure uploads directory exists
-const uploadDir = path.join(__dirname, '../uploads');
-if (!fs.existsSync(uploadDir)) {
-  fs.mkdirSync(uploadDir, { recursive: true });
+// Ensure uploads base & blogs directory exist
+const baseUploadDir = path.join(__dirname, '../uploads');
+const blogUploadDir = path.join(baseUploadDir, 'blogs');
+
+if (!fs.existsSync(baseUploadDir)) {
+  fs.mkdirSync(baseUploadDir, { recursive: true });
+}
+if (!fs.existsSync(blogUploadDir)) {
+  fs.mkdirSync(blogUploadDir, { recursive: true });
 }
 
 // Configure multer storage
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, uploadDir);
+    const subfolder = (req.query.folder || req.body.folder || 'blogs').toLowerCase();
+    const targetDir = path.join(baseUploadDir, subfolder);
+    if (!fs.existsSync(targetDir)) {
+      fs.mkdirSync(targetDir, { recursive: true });
+    }
+    cb(null, targetDir);
   },
   filename: function (req, file, cb) {
     const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
     const ext = path.extname(file.originalname).toLowerCase();
-    cb(null, 'img-' + uniqueSuffix + ext);
+    cb(null, 'blog-' + uniqueSuffix + ext);
   }
 });
 
@@ -41,7 +51,7 @@ const upload = multer({
   fileFilter: fileFilter
 });
 
-// @desc    Upload image to server/uploads folder
+// @desc    Upload image to server/uploads/blogs folder
 // @route   POST /api/upload
 router.post('/', upload.single('image'), (req, res) => {
   try {
@@ -49,16 +59,18 @@ router.post('/', upload.single('image'), (req, res) => {
       return res.status(400).json({ success: false, message: 'Please select an image to upload' });
     }
 
+    const subfolder = (req.query.folder || req.body.folder || 'blogs').toLowerCase();
     const host = req.get('host');
     const protocol = req.protocol;
-    const fileUrl = `${protocol}://${host}/uploads/${req.file.filename}`;
+    const fileUrl = `${protocol}://${host}/uploads/${subfolder}/${req.file.filename}`;
+    const relativePath = `/uploads/${subfolder}/${req.file.filename}`;
 
     return res.status(200).json({
       success: true,
-      message: 'Image uploaded successfully to backend uploads directory',
+      message: `Image uploaded successfully to backend uploads/${subfolder} directory`,
       filename: req.file.filename,
       url: fileUrl,
-      path: `/uploads/${req.file.filename}`
+      path: relativePath
     });
   } catch (error) {
     return res.status(500).json({ success: false, message: error.message });
