@@ -6,7 +6,7 @@ const BlogSchema = new mongoose.Schema({
   image: { type: String, default: '' },
   category: { type: String, required: true },
   categoryId: { type: String, default: '' },
-  author: { type: String, default: 'Pranjal Gupta' },
+  author: { type: String, default: 'Spartans Facility Management — Sales Team' },
   readTime: { type: String, default: '4 min read' },
   excerpt: { type: String, required: true },
   content: { type: String, required: true }, // HTML Rich Text

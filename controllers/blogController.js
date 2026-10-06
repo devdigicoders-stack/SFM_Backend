@@ -84,7 +84,7 @@ exports.createBlog = async (req, res) => {
       image: image || '',
       category: category || 'AI & Predictive FM',
       categoryId: categoryId || '',
-      author: author || 'Pranjal Gupta',
+      author: author || 'Spartans Facility Management — Sales Team',
       readTime: readTime || '4 min read',
       excerpt: excerpt || title,
       content,

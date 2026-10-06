@@ -40,8 +40,8 @@ exports.createBanner = async (req, res) => {
       active: typeof active === 'boolean' ? active : true,
       ctaText: ctaText || 'Request Facility Health Audit',
       ctaLink: ctaLink || '/contact',
-      secondaryCtaText: secondaryCtaText || 'Explore Vigyani.ai Hub',
-      secondaryCtaLink: secondaryCtaLink || '/vigyani-ai'
+      secondaryCtaText: secondaryCtaText || 'Explore AI Tracking & Monitoring',
+      secondaryCtaLink: secondaryCtaLink || '/ifm-services'
     });
 
     return res.status(201).json({

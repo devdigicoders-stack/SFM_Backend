@@ -43,13 +43,13 @@ async function seedDatabase() {
         active: true,
         ctaText: 'Request Facility Health Audit',
         ctaLink: '/contact',
-        secondaryCtaText: 'Explore Vigyani.ai Hub',
+        secondaryCtaText: 'Explore AI Tracking & Monitoring',
         secondaryCtaLink: '/ifm-services'
       },
       {
         title: 'AI-Driven Predictive HVAC & Electrical Asset Oversight',
-        subtitle: 'Eliminate unplanned downtime with Vigyani.ai IoT telemetry and real-time vibration sensing.',
-        tagline: 'SFM | SMS | VIGYANI.AI',
+        subtitle: 'Eliminate unplanned downtime with IoT telemetry and real-time vibration sensing.',
+        tagline: 'SFM | SMS | AI TELEMETRY',
         badge: 'Smart FM Telemetry',
         image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1920&q=80',
         active: true,
@@ -83,12 +83,12 @@ async function seedDatabase() {
         image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80',
         category: 'AI & Predictive FM',
         categoryId: categories[0]._id.toString(),
-        author: 'Pranjal Gupta',
+        author: 'Spartans Facility Management — Sales Team',
         readTime: '4 min read',
-        excerpt: 'Traditional maintenance is reactive. Learn how Vigyani.ai IoT vibration and thermal sensors predict motor bearing degradation 72 hours before catastrophic breakdown.',
+        excerpt: 'Traditional maintenance is reactive. Learn how IoT vibration and thermal sensors predict motor bearing degradation 72 hours before catastrophic breakdown.',
         content: `<h2>The Shift from Reactive to Predictive Asset Oversight</h2>
 <p>Commercial chiller plants in five-star hotels operate under continuous thermal strain. When a bearing fails unexpectedly during a banquet event, the financial and reputational cost is enormous.</p>
-<p>By deploying <strong>Vigyani.ai IoT sensor arrays</strong>, engineering heads receive real-time alerts 72 hours in advance of mechanical failure, ensuring zero downtime and 15-20% reduced energy consumption.</p>
+<p>By deploying <strong>AI-powered IoT sensor arrays</strong>, engineering heads receive real-time alerts 72 hours in advance of mechanical failure, ensuring zero downtime and 15-20% reduced energy consumption.</p>
 <h3>Key Performance Indicators Monitored</h3>
 <ul>
   <li>Continuous harmonic vibration and bearing resonance frequency</li>
@@ -153,7 +153,7 @@ async function seedDatabase() {
         heroTagline: 'Spartans Facility Management • June 2026 Corporate Profile',
         heroHeading: 'Strategic Repairs & Maintenance Partner',
         heroSubheading: 'Pan-India B2B Hard Services & Engineering Excellence',
-        heroDescription: 'Transforming infrastructure upkeep into seamless operational uptime. A single accountable partner for premium technical, engineering, and soft services — powered by Vigyani.ai.',
+        heroDescription: 'Transforming infrastructure upkeep into seamless operational uptime. A single accountable partner for premium technical, engineering, and soft services — powered by AI-Driven Tracking & Monitoring.',
         milestone1: '100% ITI / Diploma Verified Manpower',
         milestone2: 'Lead Technical Partner: Taj Palace Lucknow',
         milestone3: 'Central Command Hub: Lucknow',
@@ -169,7 +169,7 @@ async function seedDatabase() {
         whatsapp: '+91-8299726346',
         email: 'Sales@spartansfacility.com',
         address: 'Headquarters & Command Hub: Lucknow, Uttar Pradesh (Pan-India Presence)',
-        contactPerson: 'Pranjal Gupta',
+        contactPerson: 'Sales Team',
         website: 'https://digicoders.in',
         linkedin: 'https://linkedin.com/company/spartans-facility-management',
         facebook: 'https://facebook.com/spartansfacility',
@@ -191,7 +191,7 @@ async function seedDatabase() {
         city: 'Lucknow',
         facilityType: 'Luxury Hospitality',
         sqFootage: '150,000 - 300,000 sq ft',
-        servicesNeeded: ['HVAC Chiller Maintenance', 'Vigyani.ai IoT Telemetry', 'Diesel Generator Overhaul'],
+        servicesNeeded: ['HVAC Chiller Maintenance', 'AI-Powered Tracking & Monitoring', 'Diesel Generator Overhaul'],
         status: 'Scheduled',
         notes: 'Site audit scheduled for Friday 11:00 AM. Key focus on 3x 250 TR screw chillers.'
       },

@@ -9,8 +9,8 @@ const BannerSchema = new mongoose.Schema({
   active: { type: Boolean, default: true },
   ctaText: { type: String, default: 'Request Facility Health Audit' },
   ctaLink: { type: String, default: '/contact' },
-  secondaryCtaText: { type: String, default: 'Explore Vigyani.ai Hub' },
-  secondaryCtaLink: { type: String, default: '/vigyani-ai' },
+  secondaryCtaText: { type: String, default: 'Explore AI Tracking & Monitoring' },
+  secondaryCtaLink: { type: String, default: '/ifm-services' },
   createdAt: { type: Date, default: Date.now }
 });
 
